@@ -101,7 +101,7 @@ plt.title('Linear Regression: Local Infection vs. On Demand Scan')
 plt.legend()
 
 plt.show()  
-future_local_infection = pd.DataFrame([[30]], columns=['Local Infection'])
+future_local_infection = pd.DataFrame([[0.09]], columns=['Local Infection'])
 future_on_demand_scan = linear_reg_model.predict(future_local_infection)
 
 future_on_demand_scan_clamped = max(0, min(1, future_on_demand_scan[0]))
